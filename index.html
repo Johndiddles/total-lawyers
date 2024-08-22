@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Lawyers</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="header">
+        <img src="./assets/logo.svg" alt="total lawyers" />
+      </section>
+
+      <section class="main_section">
+        <div class="left_side">
+          <div class="description_wrapper">
+            <h1 class="description">
+              Get a 100% Free Consult for Up to $3,822/Month in Disability
+              Benefits
+            </h1>
+            <div class="short_blue_border"></div>
+            <p class="caption">Answer a few questions to get started.</p>
+          </div>
+          <div class="footnote">
+            <p>
+              Join over 1M+ others who chose us to connect with a lawyer — for
+              free.
+            </p>
+            <div class="clients_wrapper">
+              <img src="./assets/google.svg" alt="google" />
+              <img src="./assets/norton.svg" alt="norton" />
+              <img src="./assets/bbb.svg" alt="bbb accredited business" />
+            </div>
+          </div>
+        </div>
+
+        <div class="right_side">
+          <form action="" id="signup_form">
+            <div action="" class="form show_form" id="form1">
+              <div class="form_field_wrapper">
+                <label for="age">1. How old are you?</label>
+                <div class="dropdown_input_wrapper" tabindex="0">
+                  <p>Select an answer</p>
+                  <img
+                    src="./assets/chevron-down-solid.svg"
+                    alt="age dropdown"
+                  />
+                </div>
+              </div>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  >2. Do you expect to be out of work for at least a year due to
+                  your health?</label
+                >
+                <div class="input_fields_wrapper">
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>Yes</p>
+                  </div>
+
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>No</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="submit_button" onclick="handleNext()">
+                Next Step
+              </button>
+            </div>
+
+            <div action="" class="form hide_form" id="form2">
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  ><span>3.</span> Have you been treated by a doctor, hospital,
+                  or clinic in the last year?</label
+                >
+                <div class="input_fields_wrapper">
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>Yes</p>
+                  </div>
+
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>No</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  ><span>4.</span> Have you had a full time job within the past
+                  5 years?</label
+                >
+                <div class="input_fields_wrapper">
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>Yes</p>
+                  </div>
+
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>No</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="submit_button" onclick="handleNext()">
+                Next Step
+              </button>
+            </div>
+
+            <div action="" class="form hide_form" id="form3">
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  ><span>5.</span> Do you already receive Social Security
+                  benefits?</label
+                >
+                <div class="input_fields_wrapper">
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>Yes</p>
+                  </div>
+
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>No</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  ><span>6.</span> Have you hired an advocate or attorney to
+                  help get benefits?</label
+                >
+                <div class="input_fields_wrapper">
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>Yes</p>
+                  </div>
+
+                  <div class="input_field" tabindex="0">
+                    <div class="radio"></div>
+                    <p>No</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="submit_button" onclick="handleNext()">
+                Next Step
+              </button>
+            </div>
+
+            <div action="" class="form hide_form" id="form4">
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  ><span>7.</span> What’s your zip code?</label
+                >
+                <input class="input_field" />
+              </div>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work"
+                  ><span>8.</span> Please briefly list the health conditions
+                  that prevent you from working.</label
+                >
+
+                <textarea class="input_field text_field"></textarea>
+              </div>
+
+              <button class="submit_button" onclick="handleNext()">
+                Last Step
+              </button>
+
+              <div class="disclaimer">
+                <p>
+                  You should not send any sensitive or confidential information
+                  through this site. Any information sent through this site does
+                  not create an attorney-client relationship and may not be
+                  treated as privileged or confidential. The lawyer or law firm
+                  you are contacting is not required to, and may choose not to,
+                  accept you as a client. The Internet is not necessarily secure
+                  and emails sent through this site could be intercepted or read
+                  by third parties.
+                </p>
+              </div>
+            </div>
+
+            <div action="" class="form hide_form" id="form5">
+              <p class="info">We found 1 SSDI lawyer in your area!</p>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work">What's your full name?</label>
+                <div class="input_fields_wrapper">
+                  <input
+                    class="input_field"
+                    placeholder="First Name"
+                    name="first_name"
+                  />
+                  <input
+                    class="input_field"
+                    placeholder="Last Name"
+                    name="last_name"
+                  />
+                </div>
+              </div>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work">What's your telephone number?</label>
+
+                <input class="input_field" />
+              </div>
+
+              <div class="form_field_wrapper">
+                <label for="out_of_work">What’s your email address?</label>
+
+                <input class="input_field" />
+              </div>
+              <button class="submit_button">Get Free Consult</button>
+
+              <div class="disclaimer">
+                <p>
+                  By submitting this form I agree to the
+                  <a href="https://www.internetbrands.com/ibterms/"
+                    >Terms of Use</a
+                  >
+                  and
+                  <a href="https://www.internetbrands.com/privacy/privacy-main/"
+                    >Privacy Policy</a
+                  >
+                  and consent to be contacted by Martindale-Nolo and its
+                  affiliates, and up to three attorneys regarding this request
+                  and to receiving relevant marketing messages by automated
+                  means, text and/or prerecorded messages at the number
+                  provided. Consent is not required as a condition of service,
+                  <a href="#">Click Here</a> to agree without providing consent
+                  to be contacted by automated means, text and/or prerecorded
+                  messages. Rates may apply.
+                </p>
+              </div>
+            </div>
+          </form>
+
+          <div class="footnote">
+            <p class="footnote_caption">
+              Join over 1M+ others who chose us to connect with a lawyer — for
+              free.
+            </p>
+            <div class="clients_wrapper">
+              <img src="./assets/google.svg" alt="google" />
+              <img src="./assets/norton.svg" alt="norton" />
+              <img src="./assets/bbb.svg" alt="bbb accredited business" />
+            </div>
+            <div class="disclaimer" id="disclaimer_text"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Copyright © 2024 MH Sub I, LLC dba Nolo • Self-help services may not be
+        permitted in all states. The information provided on this site is not
+        legal advice, does not constitute a lawyer referral service, and no
+        attorney-client or confidential relationship is or will be formed by use
+        of the site. The attorney listings on this site are pald attorney
+        advertising. In some states, the information on this website may be
+        considered a lawyer referral service. Please reference the Terms of Use
+        and the Supplemental Terms for specific information related to your
+        state. Your use of this website constitutes acceptance of the Terms of
+        Use, Supplemental Terms, IB Privacy Policy and Cookie Policy.
+      </p>
+      <!-- /////// -->
+      <img
+        src="./assets/privacy-badge.svg"
+        alt="privacy badge"
+        class="privacy_badge"
+      />
+      <!-- /////// -->
+    </footer>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
