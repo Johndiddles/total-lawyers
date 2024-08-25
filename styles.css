@@ -141,11 +141,6 @@ input[type="radio"] {
   height: 1rem;
 }
 
-.input_field:focus,
-.input_field:focus-within {
-  border: 2px solid rgba(0, 111, 187, 1);
-}
-
 .input_field::placeholder {
   color: rgba(143, 143, 143, 1);
   font-size: 1.125rem;
@@ -168,25 +163,16 @@ input[type="radio"] {
   font-weight: 600;
 }
 
-.dropdown_input_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid rgba(225, 225, 225, 1);
-  border-radius: 5px;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  outline: inherit;
+.select_field_wrapper {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
 }
-
-.dropdown_input_wrapper:focus,
-.dropdown_input_wrapper:focus-within {
-  border: 2px solid rgba(0, 111, 187, 1);
-}
-
-.dropdown_input_wrapper p {
-  font-size: 1.125rem;
-  font-weight: 600;
+.select_field_wrapper::after {
+  content: url("./assets/caret-down-mobile.svg");
+  top: 0.85rem;
+  right: 1rem;
+  position: absolute;
 }
 
 .select_field {
@@ -195,17 +181,16 @@ input[type="radio"] {
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
   width: 100%;
+  border: 1px solid rgba(0, 111, 187, 1);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  outline: inherit;
 }
-.select_field_wrapper {
-  display: inline-block;
-  position: relative;
-  background-color: transparent;
-}
-.select_field_wrapper::after {
-  content: url("./assets/caret-down-mobile.svg");
-  top: 1rem;
-  right: 1rem;
-  position: absolute;
+
+.select_field:focus,
+.select_field:focus-within {
+  border: 1px solid rgba(0, 111, 187, 1);
 }
 
 .submit_button {
