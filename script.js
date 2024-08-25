@@ -4,10 +4,9 @@ const stage5Disclaimer = `<p>By submitting this form I agree to the <a href="htt
 provided. Consent is not required as a condition of service, <a href="#">Click Here</a> to agree without providing consent to be contacted by automated means, text and/or prerecorded messages. Rates may apply.</p>`;
 
 const forms = document.getElementsByClassName("form");
-const signUpForm = document.getElementById("signup_form");
 const disclaimer_text = document.getElementById("disclaimer_text");
 
-signUpForm.addEventListener("submit", (e) => {
+document.getElementById("signup_form").addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
@@ -53,4 +52,39 @@ function handleNext() {
   toggleForms(currentStep);
   handleDisclaimer(currentStep);
   scrollToTop();
+}
+
+const formDetails = {
+  age: "",
+  out_of_work: "",
+  treated_in_last_year: "",
+  ft_job_in_last_year: "",
+  ss_benefits: "",
+  hired_attorney: "",
+  zip_code: "",
+  health_conditions: "",
+  first_name: "",
+  last_name: "",
+  phone: "",
+  email: "",
+};
+
+function handleOnChange(event) {
+  formDetails[event.target.name] = event.target.value;
+}
+
+Array.from(document.getElementsByTagName("input")).map((input) =>
+  input.addEventListener("change", (event) => handleOnChange(event))
+);
+
+Array.from(document.getElementsByTagName("textarea")).map((input) =>
+  input.addEventListener("change", (event) => handleOnChange(event))
+);
+
+Array.from(document.getElementsByTagName("select")).map((input) =>
+  input.addEventListener("change", (event) => handleOnChange(event))
+);
+
+function handleSubmit() {
+  console.log({ formDetails });
 }

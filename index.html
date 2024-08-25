@@ -46,12 +46,19 @@
             <div action="" class="form show_form" id="form1">
               <div class="form_field_wrapper">
                 <label class="label" for="age">1. How old are you?</label>
-                <div class="dropdown_input_wrapper" tabindex="0">
-                  <p>Select an answer</p>
-                  <img
-                    src="./assets/chevron-down-solid.svg"
-                    alt="age dropdown"
-                  />
+                <div class="select_field_wrapper">
+                  <select
+                    class="dropdown_input_wrapper select_field"
+                    tabindex="0"
+                    name="age"
+                  >
+                    <option value="">Select an answer</option>
+                    <option value="18 - 20">18 - 20</option>
+                    <option value="21 - 25">21 - 25</option>
+                    <option value="26 - 30">26 - 30</option>
+                    <option value="31 - 35">31 - 35</option>
+                    <option value="36 - 40">36 - 40</option>
+                  </select>
                 </div>
               </div>
 
@@ -192,7 +199,7 @@
               </div>
 
               <div class="form_field_wrapper">
-                <p class="label" for="out_of_work">
+                <p class="label" for="hired_attorney">
                   <span>6.</span> Have you hired an advocate or attorney to help
                   get benefits?
                 </p>
@@ -233,19 +240,22 @@
 
             <div action="" class="form hide_form" id="form4">
               <div class="form_field_wrapper">
-                <label class="label" for="out_of_work"
+                <label class="label" for="zip_code"
                   ><span>7.</span> What’s your zip code?</label
                 >
-                <input class="input_field" />
+                <input class="input_field" name="zip_code" />
               </div>
 
               <div class="form_field_wrapper">
-                <label class="label" for="out_of_work"
+                <label class="label" for="health_conditions"
                   ><span>8.</span> Please briefly list the health conditions
                   that prevent you from working.</label
                 >
 
-                <textarea class="input_field text_field"></textarea>
+                <textarea
+                  class="input_field text_field"
+                  name="health_conditions"
+                ></textarea>
               </div>
 
               <button class="submit_button" onclick="handleNext()">
@@ -270,7 +280,7 @@
               <p class="info">We found 1 SSDI lawyer in your area!</p>
 
               <div class="form_field_wrapper">
-                <label class="label" for="out_of_work"
+                <label class="label" for="full_name"
                   >What's your full name?</label
                 >
                 <div class="input_fields_wrapper">
@@ -288,21 +298,23 @@
               </div>
 
               <div class="form_field_wrapper">
-                <label class="label" for="out_of_work"
+                <label class="label" for="phone"
                   >What's your telephone number?</label
                 >
 
-                <input class="input_field" />
+                <input class="input_field" name="phone" />
               </div>
 
               <div class="form_field_wrapper">
-                <label class="label" for="out_of_work"
+                <label class="label" for="email"
                   >What’s your email address?</label
                 >
 
-                <input class="input_field" />
+                <input class="input_field" name="email" />
               </div>
-              <button class="submit_button">Get Free Consult</button>
+              <button class="submit_button" onclick="handleSubmit()">
+                Get Free Consult
+              </button>
 
               <div class="disclaimer">
                 <p>
