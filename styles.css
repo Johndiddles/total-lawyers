@@ -106,7 +106,7 @@ a:visited {
   gap: 1rem;
 }
 
-.form_field_wrapper label {
+.label {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.75rem;
@@ -134,6 +134,11 @@ a:visited {
   width: 100%;
   cursor: pointer;
   outline: inherit;
+}
+
+input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
 }
 
 .input_field:focus,
